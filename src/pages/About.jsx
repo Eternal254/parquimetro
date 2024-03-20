@@ -1,8 +1,11 @@
+import React from 'react';
+import '../App.css'
+
 const About = () => {
-    return <div>
+    return <div className="default">
         <h1>¿Que es esto?</h1>
         <p>Esto es una practica sobre react</p>
-        <img src="https://steamuserimages-a.akamaihd.net/ugc/851596641410764418/E04AF6E85D81C97C25CFB431F7A0FABA6A34255A/?imw=1024&imh=491&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"></img>
+        <img src="https://i.pinimg.com/originals/92/19/67/9219675b2435637d1437eac61750e35a.gif"></img>
         </div>
 }
 
