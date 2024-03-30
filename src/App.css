@@ -54,10 +54,10 @@ font-style: italic;
   width: fit-content;
   color: white;
   margin: 5px; 
-  width: 100px; /* Ancho de cada botón */
-  height: 100px; /* Altura de cada botón */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
+  width: 100px; 
+  height: 100px; 
+  justify-content: center; 
+  align-items: center; 
   color: white;
   border: 5px solid rgb(233, 233, 233);
  
