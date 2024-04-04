@@ -64,3 +64,8 @@ font-style: italic;
 }
 
 
+.botones-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Repetir 5 columnas de tamaño flexible */
+  gap: 10px; /* Espacio entre botones */
+}
