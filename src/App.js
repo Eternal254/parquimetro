@@ -5,6 +5,7 @@ import Layout from './pages/Layout';
 import Register from './pages/Register';
 import Footer from './pages/Footer';
 import Cuadros from './pages/Cuadros';
+import Exit from './pages/Exit';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route path='/' element={<Cuadros/>}></Route>
           <Route path='about' element={<About/>}></Route>
           <Route path="Register" element={<Register/>}></Route>
-
+          <Route path="Exit" element={<Exit/>}></Route>
         </Route>
       </Routes>
     </div>

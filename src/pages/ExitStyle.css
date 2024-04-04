@@ -1,0 +1,34 @@
+.exit-title{
+    text-align: center; 
+    font-family: Arial Black; 
+    font-weight: bold; 
+    font-size: 25px; 
+    color: #000000; 
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    
+  }
+  .exit-box {
+    width: 300px;
+    height: 300px;
+    background-color: #86d4f0; 
+    border: 1px solid #0c0101;
+    padding: 20px;
+    text-align: center;
+    border-radius: 40px;
+  }
+  
+  .exit-clock {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  .exit-button {
+    margin-top: 120px;
+    padding: 10px 20px;
+    background-color: #090b0d;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  
