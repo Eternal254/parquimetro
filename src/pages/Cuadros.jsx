@@ -1,25 +1,29 @@
-import React, { useEffect } from "react";
-import Register from "./Register";
+import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import '../App.css';
 
-const Cuadros = () => {
-    useEffect(() => {
-        const totalBotones = 28;
-        const contenedor = document.getElementById('botones-container');
-        for (let i = 1; i <= totalBotones; i++) {
-            const boton = document.createElement('button');
-            boton.className = `cuadro${i}`;
-            boton.textContent = `Espacio ${i}`;
-            boton.onclick = function() {
-                window.location.href = 'Register';
-            };
-            contenedor.appendChild(boton);
+const Cuadros = ({ parkingSpots }) => {
+    const handleSpotClick = (index) => {
+        if (!parkingSpots[index]) {
+            // Si el lugar está vacío, redirigir al usuario al registro de entrada
+            window.location.href = `/register/${index}`;
+        } else {
+            // Si el lugar está ocupado, redirigir al usuario a una página donde puedan ver los detalles del registro existente
+            window.location.href = `/details/${index}`;
         }
-    }, []);
+    };
 
     return (
         <div className="Cuadros">
-            <div id="botones-container" className="botones-grid"></div>
+            {parkingSpots.map((isOccupied, index) => (
+                <button
+                    key={index}
+                    className={`cuadro ${isOccupied ? 'occupied' : 'empty'}`}
+                    onClick={() => handleSpotClick(index)}
+                >
+                    Espacio {index + 1}
+                </button>
+            ))}
         </div>
     );
 }
