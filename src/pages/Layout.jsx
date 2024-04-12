@@ -5,16 +5,19 @@ import './Layout.css';
 const Layout = () => {
     return (
         <div>
-            <nav className="nav">
-            <h1>Testing</h1>
-                <div className="nav-links">
-                    <Link to="/" className="nav-button">Home</Link>
-                    <Link to="/about" className="nav-button">About</Link>
+            <nav class="nav">
+                <div class="nav-header">
+                    <h1 class="nav-title">Parquimetro</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="/" class="nav-button">Home</a>
+                    <a href="/about" class="nav-button">About</a>
                 </div>
             </nav>
-            <hr />
+                <hr />
             <Outlet />
         </div>
+
     );
 }
 

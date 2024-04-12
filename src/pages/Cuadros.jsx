@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Register from "./Register";
 import '../App.css';
 
 const Cuadros = () => {
@@ -11,7 +10,8 @@ const Cuadros = () => {
             boton.className = `cuadro${i}`;
             boton.textContent = `Espacio ${i}`;
             boton.onclick = function() {
-                window.location.href = 'Register';
+                localStorage.setItem("numeroDelEspacio", i); // Guarda el número del espacio en local storage
+                window.location.href = '/register'; // Redirecciona al registro
             };
             contenedor.appendChild(boton);
         }

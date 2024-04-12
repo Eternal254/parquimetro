@@ -42,6 +42,7 @@ font-style: italic;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
 
 .cuadro1, .cuadro2, .cuadro3, .cuadro4, .cuadro5, .cuadro6, .cuadro7, .cuadro8, .cuadro9, .cuadro10, .cuadro11, .cuadro12, .cuadro13, .cuadro14, .cuadro15, .cuadro16, .cuadro17, .cuadro18, .cuadro19, .cuadro20, .cuadro21, .cuadro22, .cuadro23, .cuadro24, .cuadro25, .cuadro26, .cuadro27, .cuadro28 {
@@ -60,6 +61,7 @@ font-style: italic;
   align-items: center; 
   color: white;
   border: 5px solid rgb(233, 233, 233);
+  
  
 }
 
@@ -69,3 +71,4 @@ font-style: italic;
   grid-template-columns: repeat(7, 1fr); /* Repetir 5 columnas de tamaño flexible */
   gap: 10px; /* Espacio entre botones */
 }
+

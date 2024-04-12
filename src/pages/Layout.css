@@ -1,19 +1,33 @@
-.nav{
+.nav {
     background-color: rgba(118, 169, 175, 0.644);
-    margin: 10px;
+    margin: 0px;
     border-radius: 15px;
-    padding: 10px;
-}
-
-.nav-links{
-    text-align: right;
-}
-
-.nav-button{
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-title {
+    margin-right: auto; /* Empuja los botones al lado derecho */
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-button {
     background-color: aquamarine;
     border: 2px solid;
     cursor: pointer;
     margin: 2px;
     border-radius: 8px;
-    padding: 3px;
-}
+    padding: 3px 10px;
+  }
+  
