@@ -3,9 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import About from './pages/About';
 import Layout from './pages/Layout';
 import Register from './pages/Register';
-import Footer from './pages/Footer';
 import Cuadros from './pages/Cuadros';
 import Exit from './pages/Exit';
+import Footer from './pages/Footer';
 
 function App() {
   return (
@@ -17,7 +17,10 @@ function App() {
           <Route path="Register" element={<Register/>}></Route>
           <Route path="Exit" element={<Exit/>}></Route>
         </Route>
+
       </Routes>
+      <Footer/>
+
     </div>
   );
 }

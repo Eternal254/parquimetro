@@ -1,0 +1,14 @@
+/* Cuadros.css */
+
+.cuadro {
+    padding: 70px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .cuadro:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el cursor */
+  }
+  

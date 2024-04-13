@@ -2,7 +2,7 @@ body{
   background-image: url('https://www.consumoteca.com/wp-content/uploads/Aparcamiento-abierto-publico-Patryk-Sikora-Unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: auto;
+  background-position: fixed;
   color: white;
 }
 
@@ -72,3 +72,9 @@ font-style: italic;
   gap: 10px; /* Espacio entre botones */
 }
 
+
+/* button */
+
+.error {
+  color: black;
+}

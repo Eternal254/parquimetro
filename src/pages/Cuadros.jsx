@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import '../App.css';
+import './Cuadros.css'; // Importa el archivo de estilos CSS para Cuadros
 
 const Cuadros = () => {
     useEffect(() => {
@@ -7,7 +8,7 @@ const Cuadros = () => {
         const contenedor = document.getElementById('botones-container');
         for (let i = 1; i <= totalBotones; i++) {
             const boton = document.createElement('button');
-            boton.className = `cuadro${i}`;
+            boton.className = `cuadro cuadro${i}`; // Agrega la clase .cuadro y la clase específica
             boton.textContent = `Espacio ${i}`;
             boton.onclick = function() {
                 localStorage.setItem("numeroDelEspacio", i); // Guarda el número del espacio en local storage

@@ -9,8 +9,14 @@ const Register = () => {
     const [datosGuardados, setDatosGuardados] = useState(null);
     const numeroDelEspacio = parseInt(localStorage.getItem("numeroDelEspacio"));
     const [espacioOcupado, setEspacioOcupado] = useState(false);
+    const [error, setError] = useState("");
 
     const handleGuardar = () => {
+        if (nombre.trim() === "" || matricula.trim() === "") {
+            setError("Por favor, completa todos los campos.");
+            return;
+        }
+
         const datos = { nombre, matricula };
         localStorage.setItem(`savedData_${numeroDelEspacio}`, JSON.stringify(datos));
         setDatosGuardados(datos);
@@ -26,6 +32,7 @@ const Register = () => {
 
         setEspacioOcupado(true);
         localStorage.setItem(`espacioOcupado_${numeroDelEspacio}`, "true");
+        setError("");
     };
 
     const handleCancelar = () => {
@@ -38,6 +45,7 @@ const Register = () => {
 
         setEspacioOcupado(false);
         localStorage.removeItem(`espacioOcupado_${numeroDelEspacio}`);
+        setError("");
     };
 
     useEffect(() => {
@@ -65,6 +73,7 @@ const Register = () => {
 
     return (
         <div className="default">
+            {error && <p className="error">{error}</p>}
             {datosGuardados ? (
                 <div>
                     <h2>Datos guardados:</h2>
@@ -72,7 +81,7 @@ const Register = () => {
                     <p>Matrícula: {datosGuardados.matricula}</p>
                     <h2>Tiempo transcurrido: {tiempoTranscurrido} segundos</h2>
                     <button className="button1" onClick={handleCancelar}>Cancelar</button>
-                    {espacioOcupado ? <p>Estado: Ocupado</p> : <p>Estado: Disponible</p>}
+                    {espacioOcupado ? <p className="error">Estado: Ocupado</p> : <p className="error">Estado: Disponible</p>}
                 </div>
             ) : (
                 <div>
@@ -83,7 +92,7 @@ const Register = () => {
                     <br />  
                     <br />
                     <button className="button1" onClick={handleGuardar}>Guardar</button>
-                    {espacioOcupado ? <p>Estado: Ocupado</p> : <p>Estado: Disponible</p>}
+                    {espacioOcupado ? <p className="error">Estado: Ocupado</p> : <p className="error">Estado: Disponible</p>}
                 </div>
             )}
         </div>
